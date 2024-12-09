@@ -31,6 +31,8 @@ efeitoTrocaDeCorLogo.addEventListener("mouseout", () => {
 });
 
 
+//Oloco bixo!
+
 for (let i = 0; i < efeitoTrocaDeCorBox.length; i++) {
 
     const box = efeitoTrocaDeCorBox[i];
