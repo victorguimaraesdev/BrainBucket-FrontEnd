@@ -23,7 +23,7 @@ efeitoTrocaDeCorEscrevase.addEventListener("mouseout", () => {
 
 efeitoTrocaDeCorLogo.addEventListener("mouseover", () => {
     efeitoTrocaDeCorLogo.style.filter = "brightness(0.5)";
-    efeitoTrocaDeCorLogo.style.cursor = "pointer"
+    efeitoTrocaDeCorLogo.style.cursor = "pointer";
 });
 
 efeitoTrocaDeCorLogo.addEventListener("mouseout", () => {
@@ -36,7 +36,7 @@ for (let i = 0; i < efeitoTrocaDeCorBox.length; i++) {
     const box = efeitoTrocaDeCorBox[i];
 
     box.addEventListener("mouseover", () => {
-        box.style.border = "2px solid #ffffff";
+        box.style.border = "2px solid #ffffff";//gauahahahahah
     });
 
     box.addEventListener("mouseout", () => {
