@@ -31,7 +31,6 @@ efeitoTrocaDeCorLogo.addEventListener("mouseout", () => {
 });
 
 
-
 for (let i = 0; i < efeitoTrocaDeCorBox.length; i++) {
 
     const box = efeitoTrocaDeCorBox[i];
