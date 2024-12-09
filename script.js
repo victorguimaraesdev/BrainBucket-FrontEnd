@@ -23,7 +23,7 @@ efeitoTrocaDeCorEscrevase.addEventListener("mouseout", () => {
 
 efeitoTrocaDeCorLogo.addEventListener("mouseover", () => {
     efeitoTrocaDeCorLogo.style.filter = "brightness(0.5)";
-    efeitoTrocaDeCorLogo.style.cursor = "pointer";
+    efeitoTrocaDeCorLogo.style.cursor = "pointer"
 });
 
 efeitoTrocaDeCorLogo.addEventListener("mouseout", () => {
