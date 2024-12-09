@@ -54,17 +54,36 @@ h1 {
     color: #797676;
 }
 
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 5x;
+    margin-top: 6px;
+}
+
 .botao {
     border: 2px solid #5c5b5b;
-    width: 50%;
+    width: 70%;
     height: 50px;
     background: #2e2e2e;
-    border: none;
     border-radius: 20px;
-    color: #ffffff;
+    color: #c7c7c7;
     outline: none;
     font-weight: 500;
-    margin: 3px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: #c7c7c7;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
