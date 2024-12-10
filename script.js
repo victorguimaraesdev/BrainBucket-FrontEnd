@@ -2,6 +2,8 @@ const efeitoTrocaDeCor = document.getElementById("logar");
 const efeitoTrocaDeCorEscrevase = document.getElementById("escrevase");
 const efeitoTrocaDeCorLogo = document.getElementById("imagem");
 const efeitoTrocaDeCorBox = document.getElementsByClassName("box2");
+const efeitoTrocaDeCorRegistrar = document.getElementById("registrar");
+const efeitoTrocaDeCorRetornar = document.getElementById("voltarRegistro");
 
 efeitoTrocaDeCor.addEventListener("mouseover", () => {
     efeitoTrocaDeCor.style.color = "#ffffff";
@@ -23,15 +25,31 @@ efeitoTrocaDeCorEscrevase.addEventListener("mouseout", () => {
 
 efeitoTrocaDeCorLogo.addEventListener("mouseover", () => {
     efeitoTrocaDeCorLogo.style.filter = "brightness(0.5)";
-    efeitoTrocaDeCorLogo.style.cursor = "pointer"
+    efeitoTrocaDeCorLogo.style.cursor = "pointer";
 });
 
 efeitoTrocaDeCorLogo.addEventListener("mouseout", () => {
     efeitoTrocaDeCorLogo.style.filter = "none";
 });
+efeitoTrocaDeCorRegistrar.addEventListener("mouseover", () => {
+    efeitoTrocaDeCorRegistrar.style.color = "#ffffff";
+    efeitoTrocaDeCorRegistrar.style.border = "2px solid #ffffff";
+});
+efeitoTrocaDeCorRegistrar.addEventListener("mouseout", () => {
+    efeitoTrocaDeCorRegistrar.style.color = "#c7c7c7";
+    efeitoTrocaDeCorRegistrar.style.border = "2px solid #5c5b5b";
+});
+efeitoTrocaDeCorRetornar.addEventListener("mouseover", () => {
+    efeitoTrocaDeCorRetornar.style.color = "#ffff"
+    efeitoTrocaDeCorRetornar.style.cursor = "pointer";
+})
+efeitoTrocaDeCorRetornar.addEventListener("mouseout", () => {
+    efeitoTrocaDeCorRetornar.style.color = "#c7c7c7"
+    efeitoTrocaDeCorRetornar.style.cursor = "pointer";
+})
+
 
 for (let i = 0; i < efeitoTrocaDeCorBox.length; i++) {
-
     const box = efeitoTrocaDeCorBox[i];
 
     box.addEventListener("mouseover", () => {
@@ -42,3 +60,11 @@ for (let i = 0; i < efeitoTrocaDeCorBox.length; i++) {
         box.style.border = "2px solid #5c5b5b";
     });
 }
+
+const linkRegistreSe = document.getElementById("escrevase");
+const flipCardInner = document.querySelector(".flip-card-inner");
+
+linkRegistreSe.addEventListener("click", function (e) {
+    e.preventDefault();
+    flipCardInner.classList.toggle("flipado");
+});

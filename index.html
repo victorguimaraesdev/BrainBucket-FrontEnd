@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,29 +13,58 @@
         rel="stylesheet">
 </head>
 
-
 <body>
-    <div>
-        <form id="container" class="containerCentral">
-            <div class="logo">
-                <img id="imagem" width="150" height="150" src="Imagens/Logo 2.0.png" alt="name" />
+    <div class="flipMaster">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <form id="container" class="containerCentral">
+                        <div class="logo">
+                            <img id="imagem" width="150" height="150" src="Imagens/Logo 2.0.png" alt="name" />
+                        </div>
+                        <div class="box">
+                            <input id="email" class="box2" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="box">
+                            <input id="senha" class="box2" type="password" placeholder="Senha" required>
+                        </div>
+                        <div class="botoes">
+                            <button id="logar" class="botao" type="submit">Entrar</button>
+                        </div>
+                        <div>
+                            <a id="escrevase" href="#">Registre-se</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="flip-card-back">
+                    <form id="container" class="containerCentral">
+                        <div class="logo">
+                            <img id="imagem" width="150" height="150" src="Imagens/Logo 2.0.png" alt="name" />
+                        </div>
+                        <div class="box">
+                            <input id="RegistroUsuario" class="box2" type="text" placeholder="Usuario:" required>
+                        </div>
+                        <div class="box">
+                            <input id="registroEmail" class="box2" type="email" placeholder="Email:" required>
+                        </div>
+                        <div class="box">
+                            <input id="registroSenha" class="box2" type="password" placeholder="Senha:" required>
+                        </div>
+                        <div class="box">
+                            <input id="registroSenha2" class="box2" type="password" placeholder="Confirme:" required>
+                        </div>
+                        <div class="botoes">
+                            <button id="registrar" class="botao" type="submit">Registrar-se</button>
+                        </div>
+                        <div id="voltarRegistro">
+                            Retornar
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="box">
-                <input id="email" class="box2" type="email" placeholder="Email" required>
-            </div>
-            <div class="box">
-                <input id="senha" class="box2" type="password" placeholder="Senha" required>
-            </div>
-            <div class="botoes">
-                <button id="logar" class="botao" type="submit">Entrar</button>
-            </div>
-            <div>
-                <a id="escrevase" href="#">Registre-se</a>
-            </div>
-    </div>
-    </form>
-    <script src="script.js">
-    </script>
+        </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
