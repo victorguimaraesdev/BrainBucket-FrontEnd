@@ -16,56 +16,6 @@ body {
     justify-content: center;
 }
 
-
-.flipMaster {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 350px;
-    height: 500px;
-    border: 1px solid #2e2e2e;
-    border-radius: 20px;
-    perspective: 1000px;
-    backdrop-filter: blur(20px);
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-
-.flip-card-front {
-    background-color: transparent;
-    color: black;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .containerCentral {
     padding: 30px 30px;
     background: transparent;
@@ -90,10 +40,6 @@ body {
     font-size: 16px;
     color: #ffffff;
     padding: 20px 50px 20px 20px;
-}
-
-.flip-card-inner.flipado {
-    transform: rotateY(180deg);
 }
 
 .box2::placeholder {
@@ -132,18 +78,6 @@ a {
     justify-content: center;
     margin-top: 10px;
     font-size: 14px;
-}
-
-
-.flip-card-back {
-    background-color: transparent;
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
 #voltarRegistro {
