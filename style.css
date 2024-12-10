@@ -16,8 +16,14 @@ body {
     justify-content: center;
 }
 
+.flipMaster:hover {
+    opacity: 0;
+}
 
 .flipMaster {
+    transition: all 2s;
+    overflow: hidden;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +31,7 @@ body {
 }
 
 .flip-card {
+    overflow: scroll;
     background-color: transparent;
     width: 350px;
     height: 500px;
