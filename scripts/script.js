@@ -80,4 +80,4 @@ const flipMaster = document.querySelector(".flipMaster");
 logarButton.addEventListener("click", (e) => {
     e.preventDefault()
     flipMaster.style.opacity = "0"
-}); //oloco bixo!
+}); 
