@@ -1,5 +1,7 @@
 # Brain Bucket
 
+**Criadores: victorguimaraesdev, Zelchi e CardosooDev**
+
 Brain Bucket é um aplicativo simples e eficiente para gerenciamento de tarefas (*to-do list*), projetado para ajudar você a organizar seu dia a dia. Com ele, você pode adicionar, editar, marcar como concluído e excluir tarefas facilmente.
 
 ## 🔥 Funcionalidades
