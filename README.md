@@ -15,4 +15,3 @@ Brain Bucket é um aplicativo simples e eficiente para gerenciamento de tarefas 
 - **Back-end**: Node.js com Express.
 - **Banco de Dados**: SQL.
 - **Front-end**: HTML, CSS e Javascript.
-- **Outros**: HTML, CSS, JavaScript.
