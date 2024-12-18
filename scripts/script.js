@@ -73,11 +73,3 @@ const linkRetornar = document.getElementById("voltarRegistro")
 linkRetornar.addEventListener("click", () => {
     flipCardInner.classList.remove("flipado");
 });
-
-const logarButton = document.getElementById("logar");
-const flipMaster = document.querySelector(".flipMaster");
-
-logarButton.addEventListener("click", (e) => {
-    e.preventDefault()
-    flipMaster.style.opacity = "0"
-}); 
