@@ -8,7 +8,7 @@ const criarConta = async (conta) => {
     return await axios.post('http://localhost:3005/conta/criar', conta);
 }
 
-document.getElementById("containerRegistro").addEventListener("submit", (event) => {
+document.getElementById("containerRegistro").addEventListener("input", (event) => {
     event.preventDefault();
 
     const nome = document.getElementById("registroUsuario").value;
@@ -26,6 +26,22 @@ document.getElementById("containerRegistro").addEventListener("submit", (event) 
 
 const loginConta = async (conta) => {
     const { data } = await axios.post('http://localhost:3005/conta/login', conta);
+
+
+    if (!data.token) {
+        document.getElementById("logar").style.backgroundColor = "red";
+        setTimeout(() => {
+            document.getElementById("logar").style.backgroundColor = "rgb(92, 91, 91)";
+        }, 200);
+    }
+
+    if (data.token) {
+        document.getElementById("logar").style.backgroundColor = "green";
+        setTimeout(() => {
+            document.getElementById("flipMaster").style.display = "none";
+        }, 200);
+    }
+
     localStorage.setItem('Bearer', data.token);
     axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
 }
@@ -37,12 +53,6 @@ document.getElementById("containerLogin").addEventListener("submit", (event) => 
     const senha = document.getElementById("senha").value;
 
     const conta = { email, senha };
-    console.log(conta)
-    qualquerCoisa(conta)
+
+    loginConta(conta);
 });
-
-
-async function qualquerCoisa(conta) {
-    const retorno = await axios.post('http://localhost:3005/victor', conta)
-    console.log(retorno.data)
-}
