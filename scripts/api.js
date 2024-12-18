@@ -27,7 +27,6 @@ document.getElementById("containerRegistro").addEventListener("input", (event) =
 const loginConta = async (conta) => {
     const { data } = await axios.post('http://localhost:3005/conta/login', conta);
 
-
     if (!data.token) {
         document.getElementById("logar").style.backgroundColor = "red";
         setTimeout(() => {
@@ -38,6 +37,7 @@ const loginConta = async (conta) => {
     if (data.token) {
         document.getElementById("logar").style.backgroundColor = "green";
         setTimeout(() => {
+            document.getElementById("flipMaster").style.opacity = "0";
             document.getElementById("flipMaster").style.display = "none";
         }, 200);
     }
