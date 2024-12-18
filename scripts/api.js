@@ -21,13 +21,12 @@ document.getElementById("containerRegistro").addEventListener("input", (event) =
     }
 
     const conta = { nome, email, senha };
-    console.log(conta);
-    const res = criarConta(conta);
-    console.log(res);
+    criarConta(conta);
 });
 
 const loginConta = async (conta) => {
     const { data } = await axios.post('http://localhost:3005/conta/login', conta);
+
 
     if (!data.token) {
         document.getElementById("logar").style.backgroundColor = "red";
@@ -54,5 +53,6 @@ document.getElementById("containerLogin").addEventListener("submit", (event) => 
     const senha = document.getElementById("senha").value;
 
     const conta = { email, senha };
+
     loginConta(conta);
 });
