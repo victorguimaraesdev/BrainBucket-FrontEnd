@@ -1,14 +1,23 @@
 const tokenStorage = localStorage.getItem('token')
 if (tokenStorage) {
-    // Depois adicionar um verificador com a API para ver se a AUTH é valida.
     axios.defaults.headers.common['Authorization'] = `Bearer ${tokenStorage}`;
 }
 
 const criarConta = async (conta) => {
+
+    if (conta.senha !== conta.senha2) {
+        document.getElementById("registrar").style.backgroundColor = "red";
+        document.getElementById("registrar").innerHTML = "Senhas não coincidem";
+        setTimeout(() => {
+            document.getElementById("registrar").style.backgroundColor = "rgb(92, 91, 91)";
+            document.getElementById("registrar").innerHTML = "Registrar-se";
+        }, 1000);
+    }
+
     return await axios.post('http://localhost:3005/conta/criar', conta);
 }
 
-document.getElementById("containerRegistro").addEventListener("input", (event) => {
+document.getElementById("containerRegistro").addEventListener("submit", (event) => {
     event.preventDefault();
 
     const nome = document.getElementById("registroUsuario").value;
@@ -16,30 +25,31 @@ document.getElementById("containerRegistro").addEventListener("input", (event) =
     const senha = document.getElementById("registroSenha").value;
     const senha2 = document.getElementById("registroSenha2").value;
 
-    if (senha !== senha2) {
-        return alert('As senhas não coincidem!');
-    }
-
-    const conta = { nome, email, senha };
+    const conta = { nome, email, senha, senha2 };
     criarConta(conta);
 });
 
 const loginConta = async (conta) => {
     const { data } = await axios.post('http://localhost:3005/conta/login', conta);
 
+    console.log(data);
+
     if (!data.token) {
         document.getElementById("logar").style.backgroundColor = "red";
+        document.getElementById("logar").innerHTML = "Conta não encontrada";
         setTimeout(() => {
             document.getElementById("logar").style.backgroundColor = "rgb(92, 91, 91)";
-        }, 200);
+        document.getElementById("logar").innerHTML = "Entrar";
+
+        }, 1000);
     }
 
     if (data.token) {
         document.getElementById("logar").style.backgroundColor = "green";
+        document.getElementById("flipMaster").setAttribute("class", "flipMaster_sucesso");
         setTimeout(() => {
-            document.getElementById("flipMaster").style.opacity = "0";
             document.getElementById("flipMaster").style.display = "none";
-        }, 200);
+        }, 1000);
     }
 
     localStorage.setItem('Bearer', data.token);

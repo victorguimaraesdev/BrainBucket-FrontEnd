@@ -63,3 +63,8 @@
     align-items: center;
     padding: 20px;
 }
+
+.flipMaster_sucesso {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
