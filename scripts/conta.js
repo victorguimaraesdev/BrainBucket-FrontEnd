@@ -66,3 +66,5 @@ document.getElementById("containerLogin").addEventListener("submit", (event) => 
 
     loginConta(conta);
 });
+
+// window.location = "http://localhost:5500/dashboard"
