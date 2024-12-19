@@ -16,4 +16,4 @@ Brain Bucket é um aplicativo simples e eficiente para gerenciamento de tarefas 
 
 - **Back-end**: Node.js com TypeScript e Express: [API - Brain Bucket](https://github.com/Zelchi/BrainBucket-API)
 - **Banco de Dados**: SQLite.
-- **Front-end**: HTML, CSS, Javascript e Axios.
+- **Front-end**: HTML, CSS, Javascript e Axios: [Front - Brain Bucket](https://github.com/victorguimaraesdev/BrainBucket-FrontEnd)
